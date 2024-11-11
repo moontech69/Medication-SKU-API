@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "1c15b267-4056-46f3-ae6b-67616b59a9ea",
+		"name": "Docker env",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39556454"
+	},
+	"item": [
+		{
+			"name": "List medication",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create medication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"medication_name\": \"Amoxicillin\",\r\n    \"presentation\": \"Capsule\",\r\n    \"dose\": \"500\",\r\n    \"unit\": \"mg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update medication",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"medication_name\": \"Amoxicillin(FR)\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"500\",\r\n    \"unit\": \"mg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete medication",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk upload medication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"medication_name\": \"Amoxicillin\",\r\n    \"presentation\": \"Capsule\",\r\n    \"dose\": \"500\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Ibuprofen\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"200\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Paracetamol\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"500\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Cough Syrup\",\r\n    \"presentation\": \"Syrup\",\r\n    \"dose\": \"10\",\r\n    \"unit\": \"ml\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Cetirizine\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"10\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Vitamin D\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"1000\",\r\n    \"unit\": \"IU\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Metformin\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"500\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Prednisone\",\r\n    \"presentation\": \"Tablet\",\r\n    \"dose\": \"20\",\r\n    \"unit\": \"mg\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Insulin\",\r\n    \"presentation\": \"Injection\",\r\n    \"dose\": \"100\",\r\n    \"unit\": \"IU\"\r\n  },\r\n  {\r\n    \"medication_name\": \"Albuterol\",\r\n    \"presentation\": \"Inhaler\",\r\n    \"dose\": \"90\",\r\n    \"unit\": \"mcg\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/bulk-upload/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						"bulk-upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtering by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/medications/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"medications",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://0.0.0.0:8000",
+			"type": "string"
+		}
+	]
+}
