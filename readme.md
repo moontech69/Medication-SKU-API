@@ -36,8 +36,8 @@ These instructions will help you set up and run the project on your local machin
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone git@github.com:moontech69/Medication-SKU-API.git
+   cd Medication-SKU-API
    ```
 
 2. **Set up a virtual environment** (optional but recommended):
